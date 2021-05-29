@@ -30,7 +30,7 @@ KQL adds an API endpoint which can be accessed at `{url}/api/query`. It is read 
 2.1. Create an API user and set user permissions as in [`/site/blueprints/users`](https://github.com/stuymedova/kirby-headless/tree/main/site/blueprints/users). See documentation: [getkirby.com/docs/guide/users/roles](https://getkirby.com/docs/guide/users/roles) and [getkirby.com/docs/guide/users/permissions](https://getkirby.com/docs/guide/users/permissions).
 
 2.2. Set up either Session-based Authentication or Basic Auth. In this setup, I use the latter. To set up Basic Auth, modify [`/site/config/config.php`](https://github.com/stuymedova/kirby-headless/blob/main/site/config/config.php):
-```
+```php
 return [
   'api' => [
     'basicAuth' => true,
@@ -40,9 +40,18 @@ return [
 ```
 > “Basic auth is only available over HTTPS to avoid that the credentials are sent over the wire unencrypted with every request. This restriction can be disabled via [the `allowInsecure` option](https://getkirby.com/docs/reference/system/options/api#allow-insecure-requests).”
 
-3. Create an account by going to `{url}/panel`
+3. Create an account by going to `{url}/panel`.
 
 4. Create an API user. See [getkirby.com/docs/guide/users/managing-users](https://getkirby.com/docs/guide/users/managing-users). Further use these credentials to authorize requests to your API.
+
+## Setup
+
+Run in terminal: 
+```shell
+composer install
+valet link # for Valet users
+```
+Steps 3 and 4 above.
 
 ## Potentially useful tools:
 [Insomnia](https://insomnia.rest) (testing)
