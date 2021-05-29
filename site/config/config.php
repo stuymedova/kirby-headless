@@ -3,6 +3,6 @@
 return [
   'api' => [
     'basicAuth' => true,
-    'allowInsecure' => true # TODO: remove in production
+    'allowInsecure' => true # TODO: remove pre-production
   ]
 ];
