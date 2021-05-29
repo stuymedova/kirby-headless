@@ -46,12 +46,12 @@ return [
 
 ## Setup
 
-Run in terminal: 
+1. Run in terminal: 
 ```shell
 composer install
 valet link # for Valet users
 ```
-Steps 3 and 4 above.
+2. Steps 3 and 4 above.
 
 ## Potentially useful tools:
 [Insomnia](https://insomnia.rest) (testing)
