@@ -44,14 +44,15 @@ return [
 
 4. Create an API user. See [getkirby.com/docs/guide/users/managing-users](https://getkirby.com/docs/guide/users/managing-users). Further use these credentials to authorize requests to your API.
 
-## Setup
+## Quick Setup
 
-1. Run in terminal: 
+1. Clone/download this repository.
+2. Run in terminal: 
 ```shell
 composer install
 valet link # for Valet users
 ```
-2. Steps 3 and 4 above.
+3. Implement steps 3 and 4 above.
 
-## Potentially useful tools:
+## Potentially useful tools
 [Insomnia](https://insomnia.rest) (testing)
