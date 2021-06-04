@@ -19,7 +19,7 @@ For the KQL Plugin documentation, see: [github.com/getkirby/kql#kirby-ql](https:
         └── kql
 ```
 
-## Recreate
+## Replicate
 
 1. Download the KQL plugin [manually](https://github.com/getkirby/kql/releases) or with composer: `composer require getkirby/kql`.
 
