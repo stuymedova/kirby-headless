@@ -1,4 +1,4 @@
-# Kirby Headless
+# Kirby as a Headless CMS
 
 For instructions on how to get started with Kirby, see [getkirby.com/docs/guide/quickstart](https://getkirby.com/docs/guide/quickstart).  
 For KQL Plugin documentation, see [github.com/getkirby/kql](https://github.com/getkirby/kql#kirby-ql).
