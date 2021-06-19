@@ -1,8 +1,7 @@
 # Kirby Headless
 
-For instructions on how to get started with Kirby, see [getkirby.com/docs/guide/quickstart](https://getkirby.com/docs/guide/quickstart).
-
-For KQL Plugin documentation, see [github.com/getkirby/kql#kirby-ql](https://github.com/getkirby/kql#kirby-ql).
+For instructions on how to get started with Kirby, see [getkirby.com/docs/guide/quickstart](https://getkirby.com/docs/guide/quickstart).  
+For KQL Plugin documentation, see [github.com/getkirby/kql](https://github.com/getkirby/kql#kirby-ql).
 
 ## Overview
 
@@ -21,20 +20,16 @@ For KQL Plugin documentation, see [github.com/getkirby/kql#kirby-ql](https://git
 
 ## Prerequisites
 
-- [PHP](https://www.php.net)
-- [Composer](https://getcomposer.org)
+[PHP](https://www.php.net) and [Composer](https://getcomposer.org)
 
 ## Replicate
 
-1. Download the KQL plugin [manually](https://github.com/getkirby/kql/releases) or with composer: `composer require getkirby/kql`.
-
-KQL adds an API endpoint that can be accessed at `{url}/api/query`. It is read-only.
-
-2. The endpoint requires [authentication](https://getkirby.com/docs/guide/api/authentication).
-
-2.1. Create an API user and set user permissions as in [`/site/blueprints/users`](https://github.com/stuymedova/kirby-headless/tree/main/site/blueprints/users). See documentation on [roles](https://getkirby.com/docs/guide/users/roles) and [permissions](https://getkirby.com/docs/guide/users/permissions).
-
-2.2. Set up either Session-based Authentication or Basic Auth. In this setup, I use the latter. To set up Basic Auth, modify [`/site/config/config.php`](https://github.com/stuymedova/kirby-headless/blob/main/site/config/config.php):
+Assuming the official [Plainkit](https://github.com/getkirby/plainkit) or [Starterkit](https://github.com/getkirby/starterkit) as a starting point.
+1. Install Kirby dependencies: `composer install`.
+2. Install the KQL plugin: `composer require getkirby/kql`.
+3. Set up authentication: 
+* Create an API user and set user permissions in `/site/blueprints/users`. For more information, see documentation on [roles](https://getkirby.com/docs/guide/users/roles) and [permissions](https://getkirby.com/docs/guide/users/permissions).
+* Set up Basic Auth. Modify `/site/config/config.php`:
 ```php
 return [
   'api' => [
@@ -43,11 +38,8 @@ return [
   ]
 ];
 ```
-> “Basic auth is only available over HTTPS to avoid that the credentials are sent over the wire unencrypted with every request. This restriction can be disabled via [the `allowInsecure` option](https://getkirby.com/docs/reference/system/options/api#allow-insecure-requests).”
-
-3. Open `{url}/panel` and create an account.
-
-4. [Create an API user](https://getkirby.com/docs/guide/users/managing-users). Further use these credentials to authorize requests to your API.
+4. Startup a local PHP server: `composer start` (or use an alternative: [Laravel Valet/MAMP/…](https://getkirby.com/docs/cookbook/setup/development-environment)).
+5. Go to the Panel (`{url}/panel`) and [create an API user](https://getkirby.com/docs/guide/users/managing-users). Further, use these credentials to authorize requests to your API.
 
 ## Quick Setup
 
@@ -57,7 +49,7 @@ return [
 composer install
 composer start
 ```
-3. Implement steps 3 and 4 above.
+3. Implement step 3 above.
 
 ## Potentially useful tools
 [Insomnia](https://insomnia.rest) (testing)
