@@ -49,7 +49,7 @@ return [
 composer install
 composer start
 ```
-3. Implement step 3 above.
+3. Implement step 5 above.
 
 ## Potentially useful tools
 [Insomnia](https://insomnia.rest) (testing)
